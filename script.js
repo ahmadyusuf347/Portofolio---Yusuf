@@ -26,7 +26,7 @@ updateClock();
 
 // --- LOGIC NAVIGASI TAB ---
 const tabs = [
-  { id: "about", navId: "nav-about", sectionId: "section-about", title: "About Me", icon: "bi-asterisk" },
+  { id: "about", navId: "nav-about", sectionId: "section-about", title: "About Me", icon: "bi-person-fill-gear" },
   { id: "experience", navId: "nav-experience", sectionId: "section-experience", title: "Experience", icon: "bi-briefcase-fill" },
   { id: "portfolio", navId: "nav-portfolio", sectionId: "section-portfolio", title: "Portofolio App", icon: "bi-database-fill-gear" },
   { id: "contact", navId: "nav-contact", sectionId: "section-contact", title: "Contact", icon: "bi-envelope-at-fill" },
@@ -59,7 +59,7 @@ tabs.forEach((tab) => {
 
     // Update Header (Sekarang menggunakan warna #0096c7 dan ikon yang sesuai sidebar)
     document.getElementById("header-title").innerText = tab.title;
-    document.getElementById("header-icon").className = `bi ${tab.icon} text-[#0096c7] text-xl hidden sm:block`;
+    document.getElementById("header-icon").className = `bi ${tab.icon} text-[#0096c7] text-2xl hidden sm:block`;
 
     // Tutup sidebar di versi mobile setelah klik
     if (window.innerWidth < 1024 && !sidebar.classList.contains("-translate-x-full")) {

@@ -52,7 +52,7 @@
             id="nav-about"
             class="nav-btn flex items-center gap-3 px-4 py-3 bg-blue-50 text-[#0096c7] font-medium border border-blue-100 shadow-sm transition"
           >
-            <i class="bi bi-asterisk text-lg"></i>
+            <i class="bi bi-person-fill-gear text-2xl"></i>
             <span>About Me</span>
           </a>
           <a
@@ -112,7 +112,7 @@
           </button>
           <i
             id="header-icon"
-            class="bi bi-asterisk text-[#0096c7] text-xl hidden sm:block"
+            class="bi bi-person-fill-gear text-[#0096c7] text-2xl hidden sm:block"
           ></i>
           <h2
             id="header-title"
@@ -121,11 +121,15 @@
             About Me
           </h2>
         </div>
-        <div
-          class="flex items-center gap-2 text-sm text-gray-500 font-medium hidden sm:flex"
-        >
-          <img src="/asset/Profil.webp" alt="" class="w-10" />
-          <span>Yusuf</span>
+        <!-- Header Kanan: Profil -->
+        <div class="flex items-center gap-3 text-sm text-gray-500 font-medium">
+          <img
+            src="/asset/Profil.webp"
+            alt="Profile Yusuf"
+            class="w-10 h-10 rounded-full object-cover shadow-sm"
+          />
+          <!-- Class hidden sm:block akan menyembunyikan nama di HP, tapi muncul di Tab/PC -->
+          <span class="hidden sm:block">Yusuf</span>
         </div>
       </header>
 
@@ -142,7 +146,8 @@
             <h3 class="text-2xl font-bold mb-4 text-gray-800">
               Hello! Welcome to my portfolio.
             </h3>
-            <p class="text-gray-600 leading-relaxed mb-4 text-justify">
+
+            <p class="text-gray-600 leading-relaxed mb-6 text-justify">
               My name is Yusuf, and I am an aspiring Technical Engineer with a
               strong passion for web development. I may not be an expert yet,
               but I am highly motivated to improve my skills every single day.
@@ -154,6 +159,16 @@
               mistakes along the way. I am excited to keep building, keep
               failing, and keep learning.
             </p>
+
+            <!-- Bagian CTA (Call to Action) -->
+            <div class="border-t border-gray-100 pt-6">
+              <button
+                onclick="document.getElementById('nav-contact').click()"
+                class="bg-[#0096c7] hover:bg-[#023e8a] text-white px-6 py-2.5 shadow-sm transition font-medium flex items-center gap-2 w-fit"
+              >
+                Mari Berdiskusi <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
           </div>
         </section>
 
@@ -725,6 +740,11 @@
             </div>
           </div>
         </section>
+        <footer
+          class="mt-12 pb-4 text-center text-sm text-gray-400 font-medium"
+        >
+          &copy; 2026 Yusuf. All rights reserved.
+        </footer>
       </div>
     </div>
     <script src="script.js"></script>
