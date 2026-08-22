@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Portofolio | Yusuf</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-800 h-screen flex overflow-hidden">
+    <!-- Sidebar Backdrop Mobile -->
+    <div
+      id="sidebar-backdrop"
+      class="fixed inset-0 bg-gray-900/40 backdrop-blur-sm z-30 hidden lg:hidden transition-opacity"
+    ></div>
+
+    <!-- Sidebar -->
+    <aside
+      id="sidebar"
+      class="fixed inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 flex flex-col justify-between transform -translate-x-full transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0 shrink-0 shadow-xl lg:shadow-none"
+    >
+      <div>
+        <div
+          class="p-5 flex items-center justify-between border-b border-gray-100"
+        >
+          <div class="flex flex-col pt-4 pb-2">
+            <img
+              src="/asset/LogoAY.webp"
+              alt=""
+              style="height: auto; width: 150px"
+            />
+            <p class="text-md text-gray-500 font-medium">Technical Engineer</p>
+          </div>
+          <button
+            id="close-sidebar"
+            class="lg:hidden text-gray-400 hover:text-gray-800 text-2xl"
+          >
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+
+        <nav class="p-4 space-y-2">
+          <a
+            href="#"
+            id="nav-about"
+            class="nav-btn flex items-center gap-3 px-4 py-3 bg-blue-50 text-[#0096c7] font-medium border border-blue-100 shadow-sm transition"
+          >
+            <i class="bi bi-asterisk text-lg"></i>
+            <span>About Me</span>
+          </a>
+          <a
+            href="#"
+            id="nav-experience"
+            class="nav-btn flex items-center gap-3 px-4 py-3 text-gray-500 hover:bg-gray-50 hover:text-gray-800 transition"
+          >
+            <i class="bi bi-briefcase-fill text-lg"></i>
+            <span>Experience</span>
+          </a>
+          <a
+            href="#"
+            id="nav-portfolio"
+            class="nav-btn flex items-center gap-3 px-4 py-3 text-gray-500 hover:bg-gray-50 hover:text-gray-800 transition"
+          >
+            <i class="bi bi-database-fill-gear text-lg"></i>
+            <span>Portofolio App</span>
+          </a>
+          <a
+            href="#"
+            id="nav-contact"
+            class="nav-btn flex items-center gap-3 px-4 py-3 text-gray-500 hover:bg-gray-50 hover:text-gray-800 transition"
+          >
+            <i class="bi bi-envelope-at-fill text-lg"></i>
+            <span>Contact</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="p-5 border-t border-gray-100 text-center">
+        <div
+          class="text-[10px] text-gray-400 font-semibold mb-1 uppercase tracking-wider"
+        >
+          Waktu Lokal
+        </div>
+        <div
+          id="jam"
+          class="font-mono text-sm text-[#03045e] font-semibold bg-[#0096c7] py-2 border border-gray-200"
+        >
+          --:--:--
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="flex-1 flex flex-col h-full overflow-hidden w-full">
+      <!-- Header -->
+      <header
+        class="h-16 bg-white border-b border-gray-200 px-4 md:px-6 flex items-center justify-between shrink-0"
+      >
+        <div class="flex items-center gap-3">
+          <button
+            id="menu-btn"
+            class="lg:hidden text-gray-500 hover:text-gray-800 text-2xl focus:outline-none"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+          <i
+            id="header-icon"
+            class="bi bi-asterisk text-[#0096c7] text-xl hidden sm:block"
+          ></i>
+          <h2
+            id="header-title"
+            class="text-base md:text-lg font-semibold text-gray-800 truncate"
+          >
+            About Me
+          </h2>
+        </div>
+        <div
+          class="flex items-center gap-2 text-sm text-gray-500 font-medium hidden sm:flex"
+        >
+          <img src="/asset/Profil.webp" alt="" class="w-10" />
+          <span>Yusuf</span>
+        </div>
+      </header>
+
+      <!-- Area Konten -->
+      <div
+        class="flex-1 overflow-y-auto bg-gradient-to-br from-slate-50 via-gray-50 to-[#e0f2fe] w-full p-4 md:p-8"
+      >
+        <!-- 1. ABOUT ME -->
+        <section
+          id="section-about"
+          class="block max-w-4xl mx-auto animation-fade"
+        >
+          <div class="bg-white border border-gray-200 p-8 shadow-sm">
+            <h3 class="text-2xl font-bold mb-4 text-gray-800">
+              Hello! Welcome to my portfolio.
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              My name is Yusuf, and I am an aspiring Technical Engineer with a
+              strong passion for web development. I may not be an expert yet,
+              but I am highly motivated to improve my skills every single day.
+              <br />
+              <br />To challenge myself, I spend a lot of time working on side
+              projects in my personal lab. Here, I experiment with building
+              simple web apps from scratch. These personal projects allow me to
+              turn theoretical concepts into real code and learn from my
+              mistakes along the way. I am excited to keep building, keep
+              failing, and keep learning.
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. EXPERIENCE -->
+        <section
+          id="section-experience"
+          class="hidden max-w-4xl mx-auto animation-fade"
+        >
+          <div class="bg-white border border-gray-200 p-8 shadow-sm">
+            <h3 class="text-xl font-bold mb-6 text-gray-800 border-b pb-3">
+              Professional Experience
+            </h3>
+            <div class="border-l-2 border-blue-200 pl-4 ml-2">
+              <!-- Pengalaman 1 -->
+              <div class="mb-8 relative group">
+                <div
+                  class="absolute w-3 h-3 bg-[#0096c7] rounded-full -left-[23px] top-1.5 ring-4 ring-blue-50 group-hover:scale-125 transition-transform"
+                ></div>
+                <h4 class="font-bold text-gray-800 text-lg">
+                  Technical Engineer | Sales Support
+                </h4>
+                <p class="text-sm text-[#0096c7] font-medium mb-2">
+                  PT Maximus Teknologi Indonesia | 2024 - Present
+                </p>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Lorem ipsum dolor sit amet, sed elit elit eiusmod velit qui.
+                  Do ea ullamco quis et esse laboris in dolore. Mollit deserunt
+                  in officia id ex occaecat irure laboris laboris commodo. Sint
+                  dolore aliqua eiusmod magna laborum velit enim nostrud
+                  exercitation.
+                </p>
+              </div>
+
+              <!-- Pengalaman 2 -->
+              <div class="mb-8 relative group">
+                <div
+                  class="absolute w-3 h-3 bg-gray-300 rounded-full -left-[23px] top-1.5 group-hover:bg-[#0096c7] group-hover:scale-125 transition-all"
+                ></div>
+                <h4 class="font-bold text-gray-800 text-lg">
+                  Village Officials
+                </h4>
+                <p class="text-sm text-[#0096c7] font-medium mb-2">
+                  PEMDES Sukamaju, Cibeber, Cianjur | 2020 - 2024
+                </p>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Lorem ipsum dolor sit amet, sed elit elit eiusmod velit qui.
+                  Do ea ullamco quis et esse laboris in dolore. Mollit deserunt
+                  in officia id ex occaecat irure laboris laboris commodo. Sint
+                  dolore aliqua eiusmod magna laborum velit enim nostrud
+                  exercitation.
+                </p>
+              </div>
+              <!-- Pengalaman 3 -->
+              <div class="mb-8 relative group">
+                <div
+                  class="absolute w-3 h-3 bg-gray-300 rounded-full -left-[23px] top-1.5 group-hover:bg-[#0096c7] group-hover:scale-125 transition-all"
+                ></div>
+                <h4 class="font-bold text-gray-800 text-lg">Cooking Crew</h4>
+                <p class="text-sm text-[#0096c7] font-medium mb-2">
+                  PT. Griya Miesejati | 2017 - 2020
+                </p>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Lorem ipsum dolor sit amet, sed elit elit eiusmod velit qui.
+                  Do ea ullamco quis et esse laboris in dolore. Mollit deserunt
+                  in officia id ex occaecat irure laboris laboris commodo. Sint
+                  dolore aliqua eiusmod magna laborum velit enim nostrud
+                  exercitation.
+                </p>
+              </div>
+
+              <!-- Pengalaman 4 -->
+              <div class="relative group">
+                <div
+                  class="absolute w-3 h-3 bg-gray-300 rounded-full -left-[23px] top-1.5 group-hover:bg-[#0096c7] group-hover:scale-125 transition-all"
+                ></div>
+                <h4 class="font-bold text-gray-800 text-lg">Painting Steel</h4>
+                <p class="text-sm text-[#0096c7] font-medium mb-2">
+                  PT. Astra Honda Motor | 2013 - 2015
+                </p>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Lorem ipsum dolor sit amet, sed elit elit eiusmod velit qui.
+                  Do ea ullamco quis et esse laboris in dolore. Mollit deserunt
+                  in officia id ex occaecat irure laboris laboris commodo. Sint
+                  dolore aliqua eiusmod magna laborum velit enim nostrud
+                  exercitation.
+                </p>
+              </div>
+              <br />
+              <!-- Pengalaman 5 -->
+              <div class="mb-8 relative group">
+                <div
+                  class="absolute w-3 h-3 bg-gray-300 rounded-full -left-[23px] top-1.5 group-hover:bg-[#0096c7] group-hover:scale-125 transition-all"
+                ></div>
+                <h4 class="font-bold text-gray-800 text-lg">
+                  Quality Control (Incoming)
+                </h4>
+                <p class="text-sm text-[#0096c7] font-medium mb-2">
+                  PT. Toshiba Consumer Product Indonesia | 2012 - 2013
+                </p>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Lorem ipsum dolor sit amet, sed elit elit eiusmod velit qui.
+                  Do ea ullamco quis et esse laboris in dolore. Mollit deserunt
+                  in officia id ex occaecat irure laboris laboris commodo. Sint
+                  dolore aliqua eiusmod magna laborum velit enim nostrud
+                  exercitation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. PORTOFOLIO APP -->
+        <section
+          id="section-portfolio"
+          class="hidden max-w-5xl mx-auto animation-fade"
+        >
+          <h3 class="text-xl font-bold mb-6 text-gray-800">
+            Proyek Aplikasi Saya
+          </h3>
+
+          <!-- Grid Container -->
+          <div
+            id="portfolio-grid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <!-- Looping 9 Project Cards. Beberapa diberikan class "hidden project-item-hidden" agar tidak tampil di awal -->
+
+            <!-- Project 1 (Tampil) -->
+            <div
+              class="bg-white border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col h-full"
+            >
+              <div
+                class="bg-gray-100 aspect-video flex items-center justify-center text-gray-400 relative group-hover:bg-gray-200 transition"
+              >
+                <img src="/asset/Portofolio1.png" alt="" />
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h4 class="font-bold text-gray-800 mb-2">Project Aplikasi 1</h4>
+                <p class="text-sm text-gray-600 mb-4 flex-grow">
+                  Dashboard NVR (Network Video Recorder) custom untuk pemantauan
+                  kamera keamanan multi-kanal secara real-time.
+                </p>
+                <a
+                  href="http://nvr.ahmadyusuf.org/"
+                  target="_blank"
+                  class="group inline-flex items-center text-sm font-semibold text-[#0096c7] hover:text-[#023e8a] transition-colors mt-auto w-fit"
+                >
+                  Lihat Demo Project
+                  <i
+                    class="bi bi-arrow-right ml-1.5 transition-transform duration-300 group-hover:translate-x-2"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 2 (Tampil) -->
+            <div
+              class="bg-white border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col h-full"
+            >
+              <div
+                class="bg-gray-100 aspect-video flex items-center justify-center text-gray-400"
+              >
+                <i class="bi bi-image text-4xl"></i>
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h4 class="font-bold text-gray-800 mb-2">Project Aplikasi 2</h4>
+                <p class="text-sm text-gray-600 mb-4 flex-grow">
+                  Deskripsi singkat proyek 2.
+                </p>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="group inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors mt-auto w-fit"
+                >
+                  Lihat Demo Project
+                  <i
+                    class="bi bi-arrow-right ml-1.5 transition-transform duration-300 group-hover:translate-x-2"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 3 (Tampil) -->
+            <div
+              class="bg-white border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col h-full"
+            >
+              <div
+                class="bg-gray-100 aspect-video flex items-center justify-center text-gray-400"
+              >
+                <i class="bi bi-image text-4xl"></i>
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h4 class="font-bold text-gray-800 mb-2">Project Aplikasi 3</h4>
+                <p class="text-sm text-gray-600 mb-4 flex-grow">
+                  Deskripsi singkat proyek 3.
+                </p>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="group inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors mt-auto w-fit"
+                >
+                  Lihat Demo Project
+                  <i
+                    class="bi bi-arrow-right ml-1.5 transition-transform duration-300 group-hover:translate-x-2"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- KUMPULAN PROJECT HIDDEN (4 - 9) -->
+            <!-- Note: terdapat class "hidden project-item-hidden" -->
+
+            <!-- Project 4 (Hidden) -->
+            <div
+              class="hidden project-item-hidden bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col h-full"
+            >
+              <div
+                class="bg-gray-100 aspect-video flex items-center justify-center text-gray-400"
+              >
+                <i class="bi bi-image text-4xl"></i>
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h4 class="font-bold text-gray-800 mb-2">Project Aplikasi 4</h4>
+                <p class="text-sm text-gray-600 mb-4 flex-grow">
+                  Deskripsi singkat proyek 4.
+                </p>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="group inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors mt-auto w-fit"
+                >
+                  Lihat Demo Project
+                  <i
+                    class="bi bi-arrow-right ml-1.5 transition-transform duration-300 group-hover:translate-x-2"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 5 (Hidden) -->
+            <div
+              class="hidden project-item-hidden bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col h-full"
+            >
+              <div
+                class="bg-gray-100 aspect-video flex items-center justify-center text-gray-400"
+              >
+                <i class="bi bi-image text-4xl"></i>
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h4 class="font-bold text-gray-800 mb-2">Project Aplikasi 5</h4>
+                <p class="text-sm text-gray-600 mb-4 flex-grow">
+                  Deskripsi singkat proyek 5.
+                </p>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="group inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors mt-auto w-fit"
+                >
+                  Lihat Demo Project
+                  <i
+                    class="bi bi-arrow-right ml-1.5 transition-transform duration-300 group-hover:translate-x-2"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 6 (Hidden) -->
+            <div
+              class="hidden project-item-hidden bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col h-full"
+            >
+              <div
+                class="bg-gray-100 aspect-video flex items-center justify-center text-gray-400"
+              >
+                <i class="bi bi-image text-4xl"></i>
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h4 class="font-bold text-gray-800 mb-2">Project Aplikasi 6</h4>
+                <p class="text-sm text-gray-600 mb-4 flex-grow">
+                  Deskripsi singkat proyek 6.
+                </p>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="group inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors mt-auto w-fit"
+                >
+                  Lihat Demo Project
+                  <i
+                    class="bi bi-arrow-right ml-1.5 transition-transform duration-300 group-hover:translate-x-2"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 7 (Hidden) -->
+            <div
+              class="hidden project-item-hidden bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col h-full"
+            >
+              <div
+                class="bg-gray-100 aspect-video flex items-center justify-center text-gray-400"
+              >
+                <i class="bi bi-image text-4xl"></i>
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h4 class="font-bold text-gray-800 mb-2">Project Aplikasi 7</h4>
+                <p class="text-sm text-gray-600 mb-4 flex-grow">
+                  Deskripsi singkat proyek 7.
+                </p>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="group inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors mt-auto w-fit"
+                >
+                  Lihat Demo Project
+                  <i
+                    class="bi bi-arrow-right ml-1.5 transition-transform duration-300 group-hover:translate-x-2"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 8 (Hidden) -->
+            <div
+              class="hidden project-item-hidden bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col h-full"
+            >
+              <div
+                class="bg-gray-100 aspect-video flex items-center justify-center text-gray-400"
+              >
+                <i class="bi bi-image text-4xl"></i>
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h4 class="font-bold text-gray-800 mb-2">Project Aplikasi 8</h4>
+                <p class="text-sm text-gray-600 mb-4 flex-grow">
+                  Deskripsi singkat proyek 8.
+                </p>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="group inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors mt-auto w-fit"
+                >
+                  Lihat Demo Project
+                  <i
+                    class="bi bi-arrow-right ml-1.5 transition-transform duration-300 group-hover:translate-x-2"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 9 (Hidden) -->
+            <div
+              class="hidden project-item-hidden bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col h-full"
+            >
+              <div
+                class="bg-gray-100 aspect-video flex items-center justify-center text-gray-400"
+              >
+                <i class="bi bi-image text-4xl"></i>
+              </div>
+              <div class="p-5 flex flex-col flex-grow">
+                <h4 class="font-bold text-gray-800 mb-2">Project Aplikasi 9</h4>
+                <p class="text-sm text-gray-600 mb-4 flex-grow">
+                  Deskripsi singkat proyek 9.
+                </p>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="group inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors mt-auto w-fit"
+                >
+                  Lihat Demo Project
+                  <i
+                    class="bi bi-arrow-right ml-1.5 transition-transform duration-300 group-hover:translate-x-2"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- End Grid -->
+
+          <!-- Tombol Lihat Selengkapnya -->
+          <div class="text-center mt-10">
+            <button
+              id="btn-load-more"
+              class="px-6 py-2.5 bg-white border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 hover:text-blue-600 transition shadow-sm inline-flex items-center gap-2"
+            >
+              <span>Lihat Selengkapnya</span>
+              <i class="bi bi-chevron-down text-sm"></i>
+            </button>
+          </div>
+        </section>
+
+        <!-- 4. CONTACT -->
+        <section
+          id="section-contact"
+          class="hidden max-w-5xl mx-auto animation-fade"
+        >
+          <h3 class="text-xl font-bold mb-6 text-gray-800">Hubungi Saya</h3>
+
+          <div class="bg-white border border-gray-200 p-8 shadow-sm">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+              <!-- Kiri: Form Pesan -->
+              <div>
+                <p class="text-gray-600 mb-6 text-sm">
+                  Mari terhubung! Silakan tinggalkan pesan melalui form di bawah
+                  ini.
+                </p>
+                <form class="space-y-4">
+                  <div>
+                    <label class="block text-sm text-gray-600 font-medium mb-1"
+                      >Nama Lengkap</label
+                    >
+                    <input
+                      type="text"
+                      placeholder="Masukan nama"
+                      class="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 text-gray-800 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm text-gray-600 font-medium mb-1"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      placeholder="Masukan email"
+                      class="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 text-gray-800 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm text-gray-600 font-medium mb-1"
+                      >Pesan</label
+                    >
+                    <textarea
+                      rows="4"
+                      placeholder="Tuliskan pesan Anda di sini..."
+                      class="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 text-gray-800 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="button"
+                    class="bg-[#0096c7] hover:bg-[#023e8a] text-white px-6 py-2.5 shadow-md transition font-medium w-full flex items-center justify-center gap-2"
+                  >
+                    <i class="bi bi-send-fill"></i>
+                    Kirim Pesan
+                  </button>
+                </form>
+              </div>
+
+              <!-- Kanan: Social Media -->
+              <div
+                class="flex flex-col border-t lg:border-t-0 lg:border-l border-gray-200 pt-8 lg:pt-0 lg:pl-10"
+              >
+                <p class="text-gray-600 mb-6 text-sm">
+                  Atau temukan saya di platform media sosial berikut:
+                </p>
+
+                <div class="space-y-3">
+                  <!-- LinkedIn -->
+                  <a
+                    href="https://www.linkedin.com/in/ahmad-yusuf-6816711ab/"
+                    target="_blank"
+                    class="flex items-center gap-4 p-3 border border-gray-200 hover:border-blue-600 hover:bg-blue-50 transition group"
+                  >
+                    <div
+                      class="bg-gray-100 text-gray-600 group-hover:bg-blue-600 group-hover:text-white w-10 h-10 flex items-center justify-center transition"
+                    >
+                      <i class="bi bi-linkedin text-lg"></i>
+                    </div>
+                    <div>
+                      <h4
+                        class="font-bold text-gray-800 text-sm group-hover:text-blue-600 transition"
+                      >
+                        LinkedIn
+                      </h4>
+                      <p class="text-xs text-gray-500">
+                        linkedin.com/in/ahmad-yusuf-6816711ab/
+                      </p>
+                    </div>
+                  </a>
+
+                  <!-- GitHub -->
+                  <a
+                    href="https://github.com/ahmadyusuf347"
+                    target="_blank"
+                    class="flex items-center gap-4 p-3 border border-gray-200 hover:border-gray-800 hover:bg-gray-100 transition group"
+                  >
+                    <div
+                      class="bg-gray-100 text-gray-600 group-hover:bg-gray-900 group-hover:text-white w-10 h-10 flex items-center justify-center transition"
+                    >
+                      <i class="bi bi-github text-lg"></i>
+                    </div>
+                    <div>
+                      <h4
+                        class="font-bold text-gray-800 text-sm group-hover:text-gray-900 transition"
+                      >
+                        GitHub
+                      </h4>
+                      <p class="text-xs text-gray-500">
+                        github.com/ahmadyusuf347
+                      </p>
+                    </div>
+                  </a>
+
+                  <!-- Instagram -->
+                  <a
+                    href="https://www.instagram.com/ahmdysf_8?igsi=d2UyM3AxNzJvaDZ4"
+                    target="_blank"
+                    class="flex items-center gap-4 p-3 border border-gray-200 hover:border-pink-500 hover:bg-pink-50 transition group"
+                  >
+                    <div
+                      class="bg-gray-100 text-gray-600 group-hover:bg-gradient-to-tr group-hover:from-yellow-400 group-hover:via-pink-500 group-hover:to-purple-600 group-hover:text-white w-10 h-10 flex items-center justify-center transition"
+                    >
+                      <i class="bi bi-instagram text-lg"></i>
+                    </div>
+                    <div>
+                      <h4
+                        class="font-bold text-gray-800 text-sm group-hover:text-pink-600 transition"
+                      >
+                        Instagram
+                      </h4>
+                      <p class="text-xs text-gray-500">@ahmdysf_8</p>
+                    </div>
+                  </a>
+
+                  <!-- YouTube -->
+                  <a
+                    href="https://www.youtube.com/@yusuf_tips"
+                    target="_blank"
+                    class="flex items-center gap-4 p-3 border border-gray-200 hover:border-red-500 hover:bg-red-50 transition group"
+                  >
+                    <div
+                      class="bg-gray-100 text-gray-600 group-hover:bg-red-600 group-hover:text-white w-10 h-10 flex items-center justify-center transition"
+                    >
+                      <i class="bi bi-youtube text-lg"></i>
+                    </div>
+                    <div>
+                      <h4
+                        class="font-bold text-gray-800 text-sm group-hover:text-red-600 transition"
+                      >
+                        YouTube
+                      </h4>
+                      <p class="text-xs text-gray-500">@yusuf_tips</p>
+                    </div>
+                  </a>
+
+                  <!-- Email -->
+                  <a
+                    href="mailto:yusuf@maximus.co.id"
+                    class="flex items-center gap-4 p-3 border border-gray-200 hover:border-blue-400 hover:bg-blue-50 transition group"
+                  >
+                    <div
+                      class="bg-gray-100 text-gray-600 group-hover:bg-blue-500 group-hover:text-white w-10 h-10 flex items-center justify-center transition"
+                    >
+                      <i class="bi bi-envelope-fill text-lg"></i>
+                    </div>
+                    <div>
+                      <h4
+                        class="font-bold text-gray-800 text-sm group-hover:text-blue-600 transition"
+                      >
+                        Email
+                      </h4>
+                      <p class="text-xs text-gray-500">yusuf@maximus.co.id</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
