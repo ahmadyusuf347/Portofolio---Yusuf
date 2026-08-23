@@ -83,7 +83,7 @@ if (btnLoadMore) {
         item.classList.add('block', 'animation-fade'); 
       });
       // Ubah tombol menjadi 'Sembunyikan' dan balik ikonnya
-      btnLoadMore.innerHTML = `<span>Sembunyikan</span> <i class="bi bi-chevron-up text-sm"></i>`;
+      btnLoadMore.innerHTML = `<span>Hide</span> <i class="bi bi-chevron-up text-sm"></i>`;
       isExpanded = true;
     } else {
       // Sembunyikan kembali project
