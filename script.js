@@ -100,3 +100,13 @@ if (btnLoadMore) {
     }
   });
 }
+
+// Tunggu sampai seluruh konten halaman selesai dimuat
+window.addEventListener("load", function() {
+  const loader = document.getElementById("loader");
+  
+  // Angka 2000 berarti 2000 milidetik (2 detik)
+  setTimeout(function() {
+    loader.classList.add("hidden");
+  }, 2000); 
+});
