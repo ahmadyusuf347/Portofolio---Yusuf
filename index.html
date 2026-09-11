@@ -820,14 +820,21 @@
                 <p class="text-gray-600 mb-6 text-sm">
                   Let’s connect! Please leave a message using the form below.
                 </p>
-                <form class="space-y-4">
+                <form
+                  action="https://formspree.io/f/xwlkyrgn"
+                  method="POST"
+                  class="space-y-4"
+                >
                   <div>
                     <label class="block text-sm text-gray-600 font-medium mb-1"
                       >Full Name</label
                     >
+                    <!-- Tambahkan atribut name="name" dan required -->
                     <input
                       type="text"
+                      name="name"
                       placeholder="Enter your name"
+                      required
                       class="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 text-gray-800 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition"
                     />
                   </div>
@@ -835,9 +842,12 @@
                     <label class="block text-sm text-gray-600 font-medium mb-1"
                       >Email</label
                     >
+                    <!-- Tambahkan atribut name="email" dan required -->
                     <input
                       type="email"
+                      name="email"
                       placeholder="Enter your email"
+                      required
                       class="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 text-gray-800 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition"
                     />
                   </div>
@@ -845,14 +855,18 @@
                     <label class="block text-sm text-gray-600 font-medium mb-1"
                       >Message</label
                     >
+                    <!-- Tambahkan atribut name="message" dan required -->
                     <textarea
+                      name="message"
                       rows="4"
                       placeholder="Write your message here ..."
+                      required
                       class="w-full bg-gray-50 border border-gray-300 px-4 py-2.5 text-gray-800 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition"
                     ></textarea>
                   </div>
+                  <!-- Ubah type menjadi "submit" -->
                   <button
-                    type="button"
+                    type="submit"
                     class="bg-[#0096c7] hover:bg-[#023e8a] text-white px-6 py-2.5 shadow-md transition font-medium w-full flex items-center justify-center gap-2"
                   >
                     <i class="bi bi-send-fill"></i>
