@@ -33,39 +33,58 @@ const tabs = [
 ];
 
 const activeNavClasses = ["bg-blue-50", "text-[#0096c7]", "border", "border-blue-100", "shadow-sm"];
-const inactiveNavClasses = ["text-gray-500", "hover:bg-gray-50", "hover:text-gray-800"];
+const inactiveNavClasses = ["text-gray-500", "hover:bg-blue-50", "hover:text-[#0096c7]"];
 
+// 1. Fungsi untuk mengaktifkan tab dan menyimpannya di localStorage
+function activateTab(tabId) {
+  const tab = tabs.find(t => t.id === tabId);
+  if (!tab) return;
+
+  // Reset semua tab
+  tabs.forEach((t) => {
+    document.getElementById(t.sectionId).classList.add("hidden");
+    document.getElementById(t.sectionId).classList.remove("block");
+    const navEl = document.getElementById(t.navId);
+    navEl.classList.remove(...activeNavClasses);
+    navEl.classList.add(...inactiveNavClasses);
+  });
+
+  // Aktifkan tab yang dipilih
+  const activeSection = document.getElementById(tab.sectionId);
+  activeSection.classList.remove("hidden");
+  activeSection.classList.add("block");
+
+  const activeNav = document.getElementById(tab.navId);
+  activeNav.classList.remove(...inactiveNavClasses);
+  activeNav.classList.add(...activeNavClasses);
+
+  // Update Header
+  document.getElementById("header-title").innerText = tab.title;
+  document.getElementById("header-icon").className = `bi ${tab.icon} text-[#0096c7] text-2xl hidden sm:block`;
+
+  // Simpan id tab yang sedang aktif ke LocalStorage
+  localStorage.setItem("activeMenuTab", tabId);
+}
+
+// 2. Tambahkan event listener click ke setiap tombol menu
 tabs.forEach((tab) => {
   document.getElementById(tab.navId).addEventListener("click", (e) => {
     e.preventDefault();
-
-    // Reset semua tab
-    tabs.forEach((t) => {
-      document.getElementById(t.sectionId).classList.add("hidden");
-      document.getElementById(t.sectionId).classList.remove("block");
-      const navEl = document.getElementById(t.navId);
-      navEl.classList.remove(...activeNavClasses);
-      navEl.classList.add(...inactiveNavClasses);
-    });
-
-    // Aktifkan tab yang dipilih
-    const activeSection = document.getElementById(tab.sectionId);
-    activeSection.classList.remove("hidden");
-    activeSection.classList.add("block");
-
-    const activeNav = document.getElementById(tab.navId);
-    activeNav.classList.remove(...inactiveNavClasses);
-    activeNav.classList.add(...activeNavClasses);
-
-    // Update Header (Sekarang menggunakan warna #0096c7 dan ikon yang sesuai sidebar)
-    document.getElementById("header-title").innerText = tab.title;
-    document.getElementById("header-icon").className = `bi ${tab.icon} text-[#0096c7] text-2xl hidden sm:block`;
+    
+    activateTab(tab.id);
 
     // Tutup sidebar di versi mobile setelah klik
     if (window.innerWidth < 1024 && !sidebar.classList.contains("-translate-x-full")) {
       toggleSidebar();
     }
   });
+});
+
+// 3. Saat DOM dimuat, baca LocalStorage untuk mengembalikan posisi tab terakhir
+document.addEventListener("DOMContentLoaded", () => {
+  // Jika tidak ada data tersimpan, default ke 'about'
+  const savedTab = localStorage.getItem("activeMenuTab") || "about";
+  activateTab(savedTab);
 });
 
 // --- LOGIC TOMBOL LIHAT SELENGKAPNYA (PORTFOLIO) ---
@@ -92,7 +111,7 @@ if (btnLoadMore) {
         item.classList.remove('block', 'animation-fade');
       });
       // Kembalikan tombol ke keadaan semula
-      btnLoadMore.innerHTML = `<span>Lihat Selengkapnya</span> <i class="bi bi-chevron-down text-sm"></i>`;
+      btnLoadMore.innerHTML = `<span>See More</span> <i class="bi bi-chevron-down text-sm"></i>`;
       isExpanded = false;
       
       // Gulir sedikit ke atas (opsional agar UX lebih mulus)
